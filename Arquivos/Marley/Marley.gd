@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-var velocidade_geral = Vector2(400,900)
+var velocidade_geral = Vector2(700,900)
 export var vetor = Vector2.ZERO
-var gravidade_geral = 4500
+export var gravidade_geral = 4500
 var permite_duplo = true
 
 func _physics_process(delta : float) -> void :
