@@ -5,6 +5,10 @@ export var vetor = Vector2.ZERO
 export var gravidade_geral = 4500
 var permite_duplo = true
 
+
+func _on_Area2D_body_entered(body: Node) -> void:
+	vetor.x = 0
+	
 func _physics_process(delta : float) -> void :
 	var direcao = calcular_direcao()
 	vetor = calcular_movimento(vetor, direcao ,velocidade_geral)
@@ -55,3 +59,4 @@ func _on_Objeto1_area_entered(area):
 		vetor.x = velocidade_geral.x /2
 	else:
 		vetor.x = (velocidade_geral.x * -1) / 2
+

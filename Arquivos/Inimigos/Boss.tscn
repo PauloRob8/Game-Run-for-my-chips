@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Arquivos/Inimigos/Dinossauros/artes/SpaceshipBoss.jpg" type="Texture" id=1]
+[ext_resource path="res://Arquivos/Inimigos/Boss.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 38.9853, 29.3693 )
+
+[node name="BossDino" type="KinematicBody2D"]
+collision_layer = 16
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4.10672, -50.8206 )
+shape = SubResource( 1 )
+
+[node name="bossDino" type="Sprite" parent="."]
+position = Vector2( 3.96788, -49.4465 )
+scale = Vector2( 0.104262, 0.128518 )
+texture = ExtResource( 1 )

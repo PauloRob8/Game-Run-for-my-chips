@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chrome dinosaur.png-b458f247cfbd90dda70d83872bcbe636.stex"
+path="res://.import/Chrome dinosaur.png-52314e0d42a5ecbee05445d8ba302a7a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arquivos/Inimigos/Dinossauro/artes/Chrome dinosaur.png"
-dest_files=[ "res://.import/Chrome dinosaur.png-b458f247cfbd90dda70d83872bcbe636.stex" ]
+source_file="res://Arquivos/Inimigos/Dinossauros/artes/Chrome dinosaur.png"
+dest_files=[ "res://.import/Chrome dinosaur.png-52314e0d42a5ecbee05445d8ba302a7a.stex" ]
 
 [params]
 
