@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SpaceshipBoss.jpg-fb2735382b33823e405fa4b28582afdf.stex"
+path="res://.import/Chrome dinosaur.png-2b277f36f0d0c90e12e19757e54bc199.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arquivos/Inimigos/Dinossauros/artes/SpaceshipBoss.jpg"
-dest_files=[ "res://.import/SpaceshipBoss.jpg-fb2735382b33823e405fa4b28582afdf.stex" ]
+source_file="res://Arquivos/artes/Chrome dinosaur.png"
+dest_files=[ "res://.import/Chrome dinosaur.png-2b277f36f0d0c90e12e19757e54bc199.stex" ]
 
 [params]
 

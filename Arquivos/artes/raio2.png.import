@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal2.png-aa56af42f840cb4d46d8bc6d9a5685d8.stex"
+path="res://.import/raio2.png-e1b21eea2b69067be53df7b640d094cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arquivos/fases/pre-hisrorico/Fase 1/portal2.png"
-dest_files=[ "res://.import/portal2.png-aa56af42f840cb4d46d8bc6d9a5685d8.stex" ]
+source_file="res://Arquivos/artes/raio2.png"
+dest_files=[ "res://.import/raio2.png-e1b21eea2b69067be53df7b640d094cb.stex" ]
 
 [params]
 

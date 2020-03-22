@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var velocidade_geral = Vector2(700,900)
+var velocidade_geral = Vector2(500,900)
 export var vetor = Vector2.ZERO
 export var gravidade_geral = 4500
 var permite_duplo = true
@@ -55,8 +55,5 @@ func calcular_movimento(
 
 
 func _on_Objeto1_area_entered(area):
-	if vetor.x >= 0:
-		vetor.x = velocidade_geral.x /2
-	else:
-		vetor.x = (velocidade_geral.x * -1) / 2
+	vetor.x = 0
 
