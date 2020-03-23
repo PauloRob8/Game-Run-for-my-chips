@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SpaceshipBoss.jpg-7b178731c08be6130b672193e3300351.stex"
+path="res://.import/chips.png-2ed9526e67c672444112e3bb3028bc8f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arquivos/artes/SpaceshipBoss.jpg"
-dest_files=[ "res://.import/SpaceshipBoss.jpg-7b178731c08be6130b672193e3300351.stex" ]
+source_file="res://Arquivos/artes/chips.png"
+dest_files=[ "res://.import/chips.png-2ed9526e67c672444112e3bb3028bc8f.stex" ]
 
 [params]
 

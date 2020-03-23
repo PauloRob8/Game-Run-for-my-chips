@@ -419,7 +419,7 @@ scale = Vector2( 3.02578, 5.216 )
 shape = SubResource( 17 )
 
 [node name="Marley" parent="TileMap" instance=ExtResource( 16 )]
-position = Vector2( 81.3183, 542.771 )
+position = Vector2( 377.416, 424.757 )
 
 [node name="Pedra PreHistorica(Menor)" type="Sprite" parent="."]
 position = Vector2( 1568, 544 )
@@ -428,8 +428,8 @@ texture = ExtResource( 17 )
 [node name="Dinossauro" parent="." instance=ExtResource( 22 )]
 position = Vector2( 5439.96, 592.244 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 23 )]
-position = Vector2( 76.9688, 577.564 )
+[node name="Boss" parent="." instance=ExtResource( 23 )]
+position = Vector2( 96, 182.724 )
 
 [node name="Raio" parent="." instance=ExtResource( 24 )]
 position = Vector2( 2136.84, 355.213 )
@@ -438,7 +438,7 @@ position = Vector2( 2136.84, 355.213 )
 position = Vector2( 2323.5, 355.213 )
 
 [node name="Portal" parent="." instance=ExtResource( 21 )]
-position = Vector2( 7005.39, 150.696 )
+position = Vector2( 6957.71, 119.865 )
 
 [node name="Raio3" parent="." instance=ExtResource( 24 )]
 position = Vector2( 3843.58, 264.668 )

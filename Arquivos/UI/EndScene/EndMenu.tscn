@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Arquivos/UI/OpeningMenu/PlayButton.gd" type="Script" id=1]
+[ext_resource path="res://Arquivos/artes/chips.png" type="Texture" id=2]
+[ext_resource path="res://Arquivos/Marley/Artes/Marley.png" type="Texture" id=3]
+[ext_resource path="res://Arquivos/artes/background.jpg" type="Texture" id=4]
+[ext_resource path="res://Arquivos/UI/OpeningMenu/QuitButton.gd" type="Script" id=5]
+[ext_resource path="res://Arquivos/UI/Title.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Arquivos/UI/custom_font.tres" type="DynamicFont" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -146.91
+margin_top = -20.0
+margin_right = -71.9099
+margin_bottom = 64.0
+rect_scale = Vector2( 3.33152, 1.58656 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="Buttons"]
+material = SubResource( 1 )
+margin_right = 118.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Jogar novamente"
+script = ExtResource( 1 )
+next_scene_path = "res://Arquivos/fases/pre-hisrorico/Fase 1/Level 1.tscn"
+
+[node name="QuitButton" type="Button" parent="Buttons"]
+margin_top = 24.0
+margin_right = 118.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "Sair"
+script = ExtResource( 5 )
+
+[node name="Marley" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 423.586
+margin_top = 49.8087
+margin_right = 659.586
+margin_bottom = 309.809
+rect_scale = Vector2( 0.654038, 0.646803 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chips" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -472.76
+margin_top = 113.271
+margin_right = 166.241
+margin_bottom = 830.271
+rect_scale = Vector2( 0.110818, 0.126053 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="." instance=ExtResource( 6 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -381.405
+margin_top = 95.2258
+margin_right = 120.595
+margin_bottom = 129.226
+rect_scale = Vector2( 1.67149, 2.90413 )
+custom_fonts/font = ExtResource( 7 )
+text = "Parabéns, marley conseguiu as lendárias batatas"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="Buttons/PlayButton" to="Buttons/PlayButton" method="_on_PlayButton_button_up"]
+[connection signal="button_up" from="Buttons/QuitButton" to="Buttons/QuitButton" method="_on_QuitButton_button_up"]

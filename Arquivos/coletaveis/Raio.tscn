@@ -12,7 +12,7 @@ resource_name = "bouce"
 length = 1.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("../../../../Raio/raio2:position")
+tracks/0/path = NodePath("raio2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -75,7 +75,7 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="raio2" type="Sprite" parent="."]
-position = Vector2( -0.677811, -2.21596 )
+position = Vector2( 0, 10 )
 scale = Vector2( 0.160866, 0.189645 )
 texture = ExtResource( 1 )
 

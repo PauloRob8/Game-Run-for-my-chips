@@ -5,6 +5,8 @@ export var vetor = Vector2.ZERO
 export var gravidade_geral = 4500
 var permite_duplo = true
 
+func _ready() -> void:
+	print(self.get_path())
 
 func _on_Area2D_body_entered(body: Node) -> void:
 	vetor.x = 0
@@ -54,6 +56,5 @@ func calcular_movimento(
 	return nova_velocidade;
 
 
-func _on_Objeto1_area_entered(area):
-	vetor.x = 0
-
+func _on_Area2D_area_entered(area: Area2D) -> void:
+	 vetor.x = 0
