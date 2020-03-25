@@ -1,20 +1,23 @@
 extends KinematicBody2D
 
 var velocidade_geral = Vector2(500,900)
-export var vetor = Vector2.ZERO
+export var movimento = Vector2.ZERO
 export var gravidade_geral = 4500
+export var vidas = 7
 var permite_duplo = true
+onready var player = $"."
+onready var teste = $Area2D
+export onready var teste1 = $Timer
 
-func _ready() -> void:
-	print(self.get_path())
-
-func _on_Area2D_body_entered(body: Node) -> void:
-	vetor.x = 0
-	
 func _physics_process(delta : float) -> void :
-	var direcao = calcular_direcao()
-	vetor = calcular_movimento(vetor, direcao ,velocidade_geral)
-	vetor = move_and_slide(vetor, Vector2.UP)
+	#teste1.start(10)
+	#print(teste1.time_left)
+	#teste.emit_signal("area_entered")
+	verifica_vidas()
+	if player.visible:
+		var direcao = calcular_direcao()
+		movimento = calcular_movimento(movimento, direcao ,velocidade_geral)
+		movimento = move_and_slide(movimento, Vector2.UP)
 
 func calcular_direcao() -> Vector2:
 	
@@ -28,19 +31,11 @@ func calcular_movimento(
 		direcao : Vector2,
 		velocidade : Vector2) -> Vector2:
 
-	
 	if is_on_floor():
 		permite_duplo = true
 	
-	if direcao.x == -1:
-		if linear.x > 0:
-			linear.x = 0
-	if direcao.x == 1:
-		if linear.x < 0:
-			linear.x = 0
-	
 	var nova_velocidade := linear
-	nova_velocidade.x += velocidade.x * direcao.x  / 100
+	nova_velocidade.x = velocidade.x * direcao.x
 	nova_velocidade.y += gravidade_geral * get_physics_process_delta_time()
 	
 	if direcao.y == -1:
@@ -55,6 +50,22 @@ func calcular_movimento(
 	
 	return nova_velocidade;
 
+func verifica_vidas():
+	if vidas == 0:
+		player.hide()
 
-func _on_Area2D_area_entered(area: Area2D) -> void:
-	 vetor.x = 0
+func is_visible() -> bool:
+	return player.visible
+
+func _on_Area2D_area_entered(area):
+	if area.get_name() == "Area2D":
+		velocidade_geral.x = 2000
+	if area.get_name() == "BossArea":
+		player.hide()
+	
+	#if area.get_name() == "RexArea":
+		
+		#if teste1.wait_time == 0:
+			#teste1.wait_time = 2
+			
+			#vidas -= 1

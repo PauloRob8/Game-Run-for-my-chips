@@ -19,6 +19,10 @@ config/name="Run For My Chips"
 run/main_scene="res://Arquivos/UI/OpeningMenu/Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Restart="*res://Arquivos/UI/RestartMenu/Restart.tscn"
+
 [input]
 
 ui_accept={
