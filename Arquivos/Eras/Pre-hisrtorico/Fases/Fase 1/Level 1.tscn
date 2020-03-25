@@ -461,7 +461,7 @@ position = Vector2( 4000, 536 )
 position = Vector2( 7122.52, 313.942 )
 
 [node name="Pterodactlo1" parent="Dinossauros" instance=ExtResource( 22 )]
-position = Vector2( 1944, 344 )
+position = Vector2( 1960, 560 )
 
 [node name="Painel" type="KinematicBody2D" parent="."]
 collision_layer = 0

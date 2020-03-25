@@ -87,9 +87,9 @@ autoplay = "bouce"
 anims/bouce = SubResource( 2 )
 anims/fade = SubResource( 3 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="RaioArea" type="Area2D" parent="."]
 collision_layer = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RaioArea"]
 shape = SubResource( 4 )
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="RaioArea" to="." method="_on_Area2D_area_entered"]

@@ -6,13 +6,11 @@ export var gravidade_geral = 4500
 export var vidas = 7
 var permite_duplo = true
 onready var player = $"."
-onready var teste = $Area2D
-export onready var teste1 = $Timer
+onready var detector = $Area2D
+export onready var timer = $Timer
 
 func _physics_process(delta : float) -> void :
-	#teste1.start(10)
-	#print(teste1.time_left)
-	#teste.emit_signal("area_entered")
+	
 	verifica_vidas()
 	if player.visible:
 		var direcao = calcular_direcao()
@@ -58,14 +56,13 @@ func is_visible() -> bool:
 	return player.visible
 
 func _on_Area2D_area_entered(area):
-	if area.get_name() == "Area2D":
-		velocidade_geral.x = 2000
+	print(area.get_name())
+	if area.get_name() == "RaioArea":
+		velocidade_geral.x += 50
 	if area.get_name() == "BossArea":
 		player.hide()
-	
-	#if area.get_name() == "RexArea":
-		
-		#if teste1.wait_time == 0:
-			#teste1.wait_time = 2
-			
-			#vidas -= 1
+	if area.get_name() == "RexArea" or area.get_name() == "PterodactiloArea" :
+		if timer.time_left == 0:
+			timer.wait_time = 2
+			timer.start()
+			vidas -= 1

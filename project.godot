@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Restart="*res://Arquivos/UI/RestartMenu/Restart.tscn"
+Restart="res://Arquivos/UI/RestartMenu/Restart.tscn"
 
 [input]
 
