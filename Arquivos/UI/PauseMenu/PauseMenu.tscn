@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Arquivos/UI/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Arquivos/UI/custom_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Arquivos/UI/PauseMenu/QuitButton.gd" type="Script" id=3]
+[ext_resource path="res://Arquivos/UI/PauseMenu/RestartButton.gd" type="Script" id=4]
+[ext_resource path="res://Arquivos/UI/PauseMenu/PlayButton.gd" type="Script" id=5]
+[ext_resource path="res://Arquivos/UI/PauseMenu/PauseMenu.gd" type="Script" id=6]
+
+[node name="Pause" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0156863, 0.0156863, 0.0156863, 0.364706 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -172.0
+margin_top = -88.0
+margin_right = 179.0
+margin_bottom = 201.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="ColorRect/VBoxContainer"]
+margin_right = 351.0
+margin_bottom = 40.0
+text = "Inicio"
+script = ExtResource( 5 )
+next_scene_path = "res://Arquivos/UI/OpeningMenu/Menu.tscn"
+
+[node name="RestartButton" type="Button" parent="ColorRect/VBoxContainer"]
+margin_top = 44.0
+margin_right = 351.0
+margin_bottom = 84.0
+text = "Tentar Novamente"
+script = ExtResource( 4 )
+
+[node name="QuitButton" type="Button" parent="ColorRect/VBoxContainer"]
+margin_top = 88.0
+margin_right = 351.0
+margin_bottom = 128.0
+text = "Sair do jogo"
+script = ExtResource( 3 )
+
+[node name="Title" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -181.547
+margin_top = 85.3183
+margin_right = -7.54669
+margin_bottom = 119.318
+rect_scale = Vector2( 2.17655, 2.86551 )
+custom_fonts/font = ExtResource( 2 )
+text = "Pausado"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="ColorRect/VBoxContainer/PlayButton" to="ColorRect/VBoxContainer/PlayButton" method="_on_PlayButton_button_up"]
+[connection signal="button_up" from="ColorRect/VBoxContainer/RestartButton" to="ColorRect/VBoxContainer/RestartButton" method="_on_RestartButton_button_up"]
+[connection signal="button_up" from="ColorRect/VBoxContainer/QuitButton" to="ColorRect/VBoxContainer/QuitButton" method="_on_QuitButton_button_up"]

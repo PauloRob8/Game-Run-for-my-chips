@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Arquivos/fases/pre-hisrorico/cenario/Chao PreHistorico(Subir).png" type="Texture" id=1]
 [ext_resource path="res://Arquivos/fases/pre-hisrorico/cenario/Chao PreHistorico(CDI).png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Arquivos/fases/pre-hisrorico/cenario/Chao PreHistorico(BordaEsquerdaI).png" type="Texture" id=14]
 [ext_resource path="res://Arquivos/fases/pre-hisrorico/cenario/Chao PreHistorico(BordaDireitaS).png" type="Texture" id=15]
 [ext_resource path="res://Arquivos/fases/pre-hisrorico/cenario/Chao PreHistorico(BordaEsquerdaS).png" type="Texture" id=16]
+[ext_resource path="res://Arquivos/coletaveis/Chip.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -381,3 +382,6 @@ tile_data = PoolIntArray( 327680, 13, 0, 327681, 12, 0, 327682, 12, 0, 327683, 1
 
 [node name="Marley" parent="TileMap" instance=ExtResource( 12 )]
 position = Vector2( 96, 440 )
+
+[node name="Chip" parent="." instance=ExtResource( 17 )]
+position = Vector2( 671.883, 421.206 )
