@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Arquivos/Eras/Futurista/background.jpg" type="Texture" id=1]
+[ext_resource path="res://Arquivos/UI/RestartMenu/Restart.gd" type="Script" id=2]
+
+[node name="Restart" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+next_scene_path = "res://Arquivos/Eras/Pre-hisrtorico/Fases/Fase 1/Level 1.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -8.0
+margin_right = 740.0
+margin_bottom = 421.0
+rect_scale = Vector2( 1.39756, 1.44537 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 456.0
+margin_top = 280.0
+margin_right = 513.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 57.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Restart"
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
