@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Arquivos/UI/OpeningMenu/PlayButton.gd" type="Script" id=1]
-[ext_resource path="res://Arquivos/artes/chips.png" type="Texture" id=2]
+[ext_resource path="res://Arquivos/coletaveis/Chips/chips.png" type="Texture" id=2]
 [ext_resource path="res://Arquivos/Marley/Artes/Marley.png" type="Texture" id=3]
-[ext_resource path="res://Arquivos/artes/background.jpg" type="Texture" id=4]
+[ext_resource path="res://Arquivos/Eras/Futurista/background.jpg" type="Texture" id=4]
 [ext_resource path="res://Arquivos/UI/OpeningMenu/QuitButton.gd" type="Script" id=5]
 [ext_resource path="res://Arquivos/UI/Title.tscn" type="PackedScene" id=6]
 
@@ -46,7 +46,7 @@ margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "Jogar novamente"
 script = ExtResource( 1 )
-next_scene_path = "res://Arquivos/fases/pre-hisrorico/Fase 1/Level 1.tscn"
+next_scene_path = "res://Arquivos/Eras/Pre-hisrtorico/fases/Fase 1/Level 1.tscn"
 
 [node name="QuitButton" type="Button" parent="Buttons"]
 margin_top = 24.0
