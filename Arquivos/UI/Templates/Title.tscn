@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Arquivos/UI/Templates/custom_font.tres" type="DynamicFont" id=1]
+
+[node name="Title" type="Label"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -181.547
+margin_top = 85.3183
+margin_right = -7.54669
+margin_bottom = 119.318
+rect_scale = Vector2( 2.17655, 2.86551 )
+custom_fonts/font = ExtResource( 1 )
+text = "Run For My Chips"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
