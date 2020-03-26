@@ -1,12 +1,6 @@
-extends Area2D
-
-
+extends StaticBody2D
 
 onready var playerRaio: AnimationPlayer = get_node("AnimationPlayer")
 
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-func _on_Raio_body_entered(body: Node) -> void:
+func _on_Area2D_area_entered(area):
 	playerRaio.play("fade")

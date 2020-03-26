@@ -1,13 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Arquivos/coletaveis/Raio/raio2.png" type="Texture" id=1]
 [ext_resource path="res://Arquivos/coletaveis/Raio/Raio.gd" type="Script" id=2]
 
-
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 13.322
-height = 7.80454
+[sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="Animation" id=2]
 resource_name = "bouce"
@@ -68,9 +64,14 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="Raio" type="Area2D"]
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 13.322
+height = 7.80454
+
+[node name="Raio" type="StaticBody2D"]
 position = Vector2( 0, -7.74185 )
 collision_layer = 0
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -85,4 +86,10 @@ texture = ExtResource( 1 )
 autoplay = "bouce"
 anims/bouce = SubResource( 2 )
 anims/fade = SubResource( 3 )
-[connection signal="body_entered" from="." to="." method="_on_Raio_body_entered"]
+
+[node name="RaioArea" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RaioArea"]
+shape = SubResource( 4 )
+[connection signal="area_entered" from="RaioArea" to="." method="_on_Area2D_area_entered"]
