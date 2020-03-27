@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Marley.png-ef5ded4fd6db7da02d43fe6830c74d56.stex"
+path="res://.import/cyberpunkBackground.jpg-5b75f11fa1913c43aa8f62fd2d9885a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arquivos/Marley/Artes/Marley.png"
-dest_files=[ "res://.import/Marley.png-ef5ded4fd6db7da02d43fe6830c74d56.stex" ]
+source_file="res://Arquivos/Eras/Futurista/cyberpunkBackground.jpg"
+dest_files=[ "res://.import/cyberpunkBackground.jpg-5b75f11fa1913c43aa8f62fd2d9885a8.stex" ]
 
 [params]
 

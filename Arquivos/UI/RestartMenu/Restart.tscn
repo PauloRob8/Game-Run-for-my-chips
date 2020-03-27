@@ -1,39 +1,69 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Arquivos/Eras/Futurista/background.jpg" type="Texture" id=1]
-[ext_resource path="res://Arquivos/UI/RestartMenu/Restart.gd" type="Script" id=2]
+[ext_resource path="res://Arquivos/UI/ui_theme.tres" type="Theme" id=3]
+[ext_resource path="res://Arquivos/UI/RestartMenu/Quit.gd" type="Script" id=4]
+[ext_resource path="res://Arquivos/UI/RestartMenu/Retry.gd" type="Script" id=5]
 
 [node name="Restart" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_scene_path = "res://Arquivos/Eras/Pre-hisrtorico/Fases/Fase 1/Level 1.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -8.0
-margin_right = 740.0
-margin_bottom = 421.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -276.0
+margin_bottom = -179.0
 rect_scale = Vector2( 1.39756, 1.44537 )
 texture = ExtResource( 1 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 456.0
-margin_top = 280.0
-margin_right = 513.0
-margin_bottom = 320.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -42.0
+margin_right = 90.0
+margin_bottom = 42.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_right = 57.0
-margin_bottom = 20.0
+[node name="Retry" type="Button" parent="VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 40.0
 size_flags_horizontal = 3
-text = "Restart"
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+text = "Joga novamente"
+script = ExtResource( 5 )
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 44.0
+margin_right = 180.0
+margin_bottom = 84.0
+text = "Voltar ao menu"
+script = ExtResource( 4 )
+next_scene_path = "res://Arquivos/UI/OpeningMenu/Menu.tscn"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -94.0599
+margin_top = 138.282
+margin_right = 33.9401
+margin_bottom = 176.282
+rect_scale = Vector2( 1.43602, 2.03315 )
+text = "Você morreu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="VBoxContainer/Retry" to="VBoxContainer/Retry" method="_on_Retry_button_up"]
+[connection signal="button_up" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_Quit_button_up"]

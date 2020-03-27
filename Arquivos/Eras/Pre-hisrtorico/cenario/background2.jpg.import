@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Background.jpg-2e4091541b4117c556eac5f8993b1fea.stex"
+path="res://.import/background2.jpg-e164b8b01fddb3ac3eacc6959a296742.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arquivos/Eras/Pre-hisrtorico/cenario/Background.jpg"
-dest_files=[ "res://.import/Background.jpg-2e4091541b4117c556eac5f8993b1fea.stex" ]
+source_file="res://Arquivos/Eras/Pre-hisrtorico/cenario/background2.jpg"
+dest_files=[ "res://.import/background2.jpg-e164b8b01fddb3ac3eacc6959a296742.stex" ]
 
 [params]
 

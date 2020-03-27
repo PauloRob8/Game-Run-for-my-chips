@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Arquivos/UI/OpeningMenu/PlayButton.gd" type="Script" id=1]
 [ext_resource path="res://Arquivos/coletaveis/Chips/chips.png" type="Texture" id=2]
@@ -6,17 +6,14 @@
 [ext_resource path="res://Arquivos/Eras/Futurista/background.jpg" type="Texture" id=4]
 [ext_resource path="res://Arquivos/UI/OpeningMenu/QuitButton.gd" type="Script" id=5]
 [ext_resource path="res://Arquivos/UI/Templates/Title.tscn" type="PackedScene" id=6]
-
-
-
-
-
+[ext_resource path="res://Arquivos/UI/ui_theme.tres" type="Theme" id=7]
 
 [sub_resource type="ShaderMaterial" id=1]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -35,28 +32,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -146.91
-margin_top = -20.0
-margin_right = -71.9099
-margin_bottom = 64.0
-rect_scale = Vector2( 3.33152, 1.58656 )
+margin_left = -255.589
+margin_top = -63.0615
+margin_right = -63.589
+margin_bottom = 20.9385
+rect_scale = Vector2( 2.8753, 1.69086 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlayButton" type="Button" parent="Buttons"]
 material = SubResource( 1 )
-margin_right = 118.0
-margin_bottom = 20.0
+margin_right = 192.0
+margin_bottom = 40.0
 size_flags_horizontal = 3
 text = "Jogar novamente"
 script = ExtResource( 1 )
-next_scene_path = "res://Arquivos/fases/pre-hisrorico/Fase 1/Level 1.tscn"
+next_scene_path = "res://Arquivos/Eras/Pre-hisrtorico/fases/Fase 1/Level 1.tscn"
 
 [node name="QuitButton" type="Button" parent="Buttons"]
-margin_top = 24.0
-margin_right = 118.0
-margin_bottom = 44.0
+margin_top = 44.0
+margin_right = 192.0
+margin_bottom = 84.0
 size_flags_horizontal = 3
 text = "Sair"
 script = ExtResource( 5 )
@@ -64,10 +61,10 @@ script = ExtResource( 5 )
 [node name="Marley" type="TextureRect" parent="."]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 423.586
-margin_top = 49.8087
-margin_right = 659.586
-margin_bottom = 309.809
+margin_left = 401.03
+margin_top = 78.9707
+margin_right = 637.03
+margin_bottom = 338.971
 rect_scale = Vector2( 0.654038, 0.646803 )
 texture = ExtResource( 3 )
 __meta__ = {

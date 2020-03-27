@@ -13,8 +13,6 @@ func _physics_process(delta : float) -> void :
 	boss.perseguir(jogador)
 	
 	if !jogador.visible:
-		restart.show()
-		restart.next_scene_path = "res://Arquivos/Eras/Pre-hisrtorico/Fases/Fase 2/Level 2.tscn"
 		boss.hide()
-		get_tree().change_scene_to(restart)
+		get_tree().change_scene("res://Arquivos/UI/RestartMenu/Restart.tscn")
 
