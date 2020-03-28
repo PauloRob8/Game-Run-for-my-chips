@@ -87,11 +87,12 @@ __meta__ = {
 }
 
 [node name="Title" parent="." instance=ExtResource( 6 )]
-margin_left = -381.405
-margin_top = 95.2258
-margin_right = 120.595
-margin_bottom = 129.226
+margin_left = -398.493
+margin_top = 17.1837
+margin_right = 103.507
+margin_bottom = 88.1837
 rect_scale = Vector2( 1.67149, 2.90413 )
-text = "Parabéns, marley conseguiu as lendárias batatas"
+text = "Parabéns, marley ! 
+conseguiu as lendárias batatas !"
 [connection signal="button_up" from="Buttons/PlayButton" to="Buttons/PlayButton" method="_on_PlayButton_button_up"]
 [connection signal="button_up" from="Buttons/QuitButton" to="Buttons/QuitButton" method="_on_QuitButton_button_up"]

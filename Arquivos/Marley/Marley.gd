@@ -3,7 +3,7 @@ extends KinematicBody2D
 var velocidade_geral = Vector2(500,900)
 export var movimento = Vector2.ZERO
 export var gravidade_geral = 4500
-export var vidas = 7
+export var vidas = 4
 var permite_duplo = true
 onready var player = $"."
 onready var detector = $Area2D

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed := Vector2(400.0,400.0)
+export var speed := Vector2(350.0,350.0)
 onready var boss = $"."
 onready var timer = $Timer
 
